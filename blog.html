@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pHero-Tube Blogs</title>
+     <!-- daisyui -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+     <!-- google fonts -->
+     <script src="https://cdn.tailwindcss.com"></script>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+ 
+     <style>
+         .font-inter{
+             font-family: 'Inter', sans-serif;
+         }
+         .text-primary{
+             color: #252525;
+         }
+     </style>
+
+</head>
+<body class="container mx-auto font-inter text-primary bg-gray-200 text-white">
+    <header>
+        <h1 class="text-black text-center text-3xl font-extrabold pt-4">BLOGS</h1>
+    </header>
+    <div id="blog-container" class=" w-[100%] space-y-5">
+        <div class="text-start bg-rose-700 m-2 p-4 md:m-10 md:p-10 rounded-lg">
+            <h2 class="text-3xl font-bold text-center my-5">var, let, and const</h2>
+            <p>The scope of variables declared using var, let, and const differs in JavaScript, and understanding these scopes is crucial for writing reliable code.
+                The scope of variables declared using var, let, and const differs in JavaScript, and understanding these scopes is crucial for writing reliable. <br><br>
+                
+                <span class="font-semibold text-2xl">var Scope:</span> <br><br>
+                
+                <span class="font-medium text-[18px]">Function Scope:</span> Variables declared with var are function-scoped, which means they are accessible throughout the function in which they are declared. <br>
+                <span class="font-medium text-[18px]">Hoisting:</span> var variables are hoisted to the top of their containing function or global scope. This means that the declaration is moved to the top during compilation, while the initialization (assignment) remains in place. Accessing a var variable before its declaration will result in undefined. <br>
+                <span class="font-medium text-[18px]">Global Scope:</span> If a var variable is declared outside of any function, it becomes a global variable accessible throughout the entire.<br><br>
+                Example:<br>
+
+                    function example() {
+                    if (true) {
+                        var x = 10;
+                    }
+                    console.log(x); // 10, var is function-scoped
+                    } <br><br>
+            </p>
+            <p>
+                <span class="font-semibold text-2xl">let Scope:</span><br><br>
+
+                <span class="font-medium text-[18px]">Block Scope:</span> Variables declared with let are block-scoped, which means they are limited to the block (enclosed within curly braces) in which they are declared. Block scope includes if statements, loops, and functions.<br>
+                <span class="font-medium text-[18px]">Hoisting:</span> let variables are also hoisted, but unlike var, they are not initialized. Accessing a let variable before its declaration results in a ReferenceError.<br>
+                <span class="font-medium text-[18px]">No Re-declaration:</span> You cannot re-declare a variable with the same name in the same scope. <br>
+                Example: <br>
+
+                if (true) {
+                let y = 5;
+                }
+                console.log(y); <br><br>
+                <span class="font-semibold text-2xl">const Scope:</span><br><br>
+
+                <span class="font-medium text-[18px]">Block Scope:</span> const variables are block-scoped, just like let. <br>
+                <span class="font-medium text-[18px]">Hoisting:</span>Hoisting: Similar to let, const variables are hoisted but not initialized. Accessing a const variable before its declaration results in a ReferenceError.
+                <br>
+                <span class="font-medium text-[18px]">Immutable:</span> const variables are immutable, meaning their values cannot be reassigned after declaration. However, if the variable is an object or an array, its properties or elements can be modified. <br>
+                Example:
+
+                const z = 42;
+                z = 50; 
+
+                const arr = [1, 2, 3];
+                arr.push(4); <br><br>
+                In summary, var has function scope, let and const have block scope, and all three are hoisted but with different behaviors. let and const are preferred in modern JavaScript because they provide block scope, which leads to more predictable and less error-prone code. Additionally, const enforces immutability for values, making it suitable for constants or variables that should not be reassigned. <br><br>
+            </p>
+        </div>
+        <div class="text-start bg-yellow-700 m-2 p-4 md:m-10 md:p-10 rounded-lg">
+            <h2 class="text-3xl font-bold text-center my-5">use cases of null and undefined</h2>
+            <p>
+                null and undefined are two distinct values in JavaScript, and they have specific use cases: <br><br>
+
+                <span class="font-medium text-[18px]">null:</span><br><br>
+
+                Explicit Absence of Value: null is often used to represent the intentional absence of any object value or value that is known to be missing.
+                Assignment: You can assign null to a variable or property to indicate that it currently has no meaningful value. <br><br>
+
+                <span class="font-medium text-[18px]">undefined:</span><br> <br>
+
+                Implicit Absence of Value: undefined represents a variable or property that has been declared but has not been assigned a value.
+                Default Value: Variables declared but not initialized or function parameters that are not provided a value default to undefined
+            </p><br> <br>
+            <p>
+                <span class="font-medium text-[24px]">Use Cases:</span><br><br>
+
+                <span class="font-medium text-[18px]">null Use Cases:</span><br>
+
+                When you want to explicitly indicate the absence of a value or reset a variable to an empty state.
+                In situations where you need to distinguish between an empty value and an uninitialized one. <br><br>
+                <span class="font-medium text-[18px]">undefined Use Cases:</span><br>
+
+                As a default value for function parameters when you want to allow the parameter to be optional.
+                As the default initial value for variables or properties.
+                When you want to check if a variable or property has been initialized or assigned a value.
+                It's important to use null and undefined purposefully in your code to convey the intended meaning and to avoid unexpected behavior. While they are often used to handle missing or uninitialized values, it's essential to be mindful of their use to prevent errors and ensure your code's clarity.
+            </p>
+
+        </div>
+        <div class="text-start bg-green-700 m-2 p-4 md:m-10 md:p-10 rounded-lg">
+            <h2 class="text-3xl font-bold text-center my-5">REST API</h2>
+            <p>
+                A REST API, or Representational State Transfer Application Programming Interface, is a set of rules and conventions for building and interacting with web services. It's based on the principles of REST, which is an architectural style for designing networked applications. REST APIs are widely used for client-server communication over the internet because they are simple, scalable, and easy to understand. <br> <br>
+
+                Here are the key concepts and components of a REST API: <br><br>
+
+                <span class="font-medium text-[18px]">Resources:</span><br>
+
+                In a REST API, everything is treated as a resource, which can be a physical object, a data entity, or a concept. Resources are identified by unique URIs (Uniform Resource Identifiers), and they can be manipulated using standard HTTP methods.
+                HTTP Methods:
+
+                REST APIs use standard HTTP methods (GET, POST, PUT, DELETE, etc.) to perform CRUD (Create, Read, Update, Delete) operations on resources.
+                GET: Retrieve resource data.
+                POST: Create a new resource.
+                PUT: Update an existing resource or create it if it doesn't exist.
+                DELETE: Remove a resource. <br>
+                <span class="font-medium text-[18px]">Stateless:</span><br>
+
+                REST is stateless, meaning each request from a client to the server must contain all the information needed to understand and process the request. The server doesn't store any client state between requests. <br>
+                <span class="font-medium text-[18px]">Representation:
+                </span><br>
+                Resources can have multiple representations, such as JSON, XML, HTML, or plain text. Clients can request a specific representation using content negotiation (e.g., setting the Accept header in an HTTP request). <br>
+                <span class="font-medium text-[18px]">Uniform Interface:</span><br>
+
+                REST APIs have a uniform and consistent interface, making it easier for clients to understand how to interact with resources. <br>
+                <span class="font-medium text-[18px]">Statelessness:</span><br>
+
+                Each request from a client to the server must contain all the information needed to understand and process the request. The server doesn't store client state between requests. <br>
+                <span class="font-medium text-[18px]">Authentication and Authorization:</span><br>
+
+                REST APIs can implement various authentication and authorization mechanisms to control access to resources, such as API keys, OAuth, or JWT (JSON Web Tokens). <br>
+                <span class="font-medium text-[18px]">Versioning:</span><br>
+
+                To maintain backward compatibility and allow for changes in the API over time, it's common to include versioning in the API's URI (e.g., /api/v1/resource). This way, existing clients can continue to use the old version while new clients can adopt the new one. <br>
+                <span class="font-medium text-[18px]">Status Codes:</span><br>
+
+                HTTP status codes are used to indicate the result of an API request (e.g., 200 for success, 404 for resource not found, 500 for server error). <br>
+                <span class="font-medium text-[18px]">Error Handling:</span><br>
+
+                REST APIs should provide clear and meaningful error messages in the response to help clients understand and handle errors gracefully. <br>
+                <span class="font-medium text-[18px]">Pagination and Filtering:
+                </span><br>
+                For large datasets, APIs often support pagination and filtering to limit the amount of data returned in a single request. <br>
+                <span class="font-medium text-[18px]">Caching:</span><br>
+
+                Caching mechanisms like ETags and Cache-Control headers can be used to optimize API performance and reduce server load.
+                REST APIs are commonly used in web development for building web services, mobile applications, and integrations between different systems. They provide a flexible and standardized way to expose and consume data and functionality over the internet.
+            </p>
+        </div> 
+    </div> 
+    <div class="text-center py-4">
+        <button onclick='goHome()' class="bg-violet-900 px-5 py-2 rounded-lg">Back Home</button>
+    </div>
+    <script src="./js/blog.js"></script>
+</body>
+</html>
