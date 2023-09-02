@@ -23,9 +23,16 @@
 
 </head>
 <body class="container mx-auto font-inter text-primary bg-gray-200 text-white">
-    <header>
-        <h1 class="text-black text-center text-3xl font-extrabold pt-4">BLOGS</h1>
-    </header>
+    <header class="container mx-auto pt-12">
+        <nav class="w-[100%] flex justify-between flex-col gap-4 md:flex-row items-center border-b-2 px-4 pb-8">
+          <div class="flex-1">
+              <img class="w-[contain]" src="./images/Logo.png" alt="">
+          </div>
+          <div class="flex flex-1 justify-end gap-3">
+          <button onclick='goHome()' class=" px-5 py-2 text-[18px] font-medium rounded bg-[#FF1F3D] text-[#FFF]">Back Home</button>
+          </div>
+        </nav>
+  </header>
     <div id="blog-container" class=" w-[100%] space-y-5">
         <div class="text-start bg-rose-700 m-2 p-4 md:m-10 md:p-10 rounded-lg">
             <h2 class="text-3xl font-bold text-center my-5">var, let, and const</h2>
