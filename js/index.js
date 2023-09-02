@@ -42,6 +42,10 @@ const showCategory = (allCategory) => {
       btn.style.backgroundColor = "#FF1F3D";
       btn.style.color = "#FFF";
 
+      const shortByViewBtn=document.getElementById('short-byView')
+      shortByViewBtn.style.backgroundColor=""
+      shortByViewBtn.style.color=""
+
       toggleBtn = btn;
     });
   });
